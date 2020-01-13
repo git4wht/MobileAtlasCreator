@@ -97,7 +97,9 @@ public class SettingsGUI extends JDialog {
 
 	public static Logger log = Logger.getLogger(SettingsGUI.class);
 
-	private static final Integer[] THREADCOUNT_LIST = { 1, 2, 4, 6 };
+	// Custom: WHT
+	// private static final Integer[] THREADCOUNT_LIST = { 1, 2, 4, 6 };
+	private static final Integer[] THREADCOUNT_LIST = { 1, 2, 4, 8, 12, 16, 50, 100, 200, 400 };
 
 	private static final long MBIT1 = 1000000 / 8;
 

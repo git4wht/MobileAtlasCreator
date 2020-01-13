@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapsforge>
+	<!-- name of the map - as shown in map source list -->
+	<name>Mapsforge China</name>
+	
+	<!-- optional -->
+	<minZoom>0</minZoom> 
+	
+	<!-- optional -->
+	<maxZoom>20</maxZoom> 
+	    
+	<!-- map file names -->
+	<!-- absolute or relative file name -->
+	<mapFile>china.map</mapFile>
+	
+	<!-- multiple map files can be specified
+	<mapFile>other-mapsforge-test.map</mapFile>
+	-->
+	
+	<!-- What to do if multiple map files are specified: RETURN_FIRST, RETURN_ALL, DEDUPLICATE (warning slow!) -->
+	<multiMapDataPolicy>RETURN_ALL</multiMapDataPolicy>
+
+	<!-- optional default OSMARENDERER Theme -->
+	<!-- <xmlRenderTheme>mytheme.xml</xmlRenderTheme> -->
+	
+	<transparent>false</transparent>
+	
+	<!-- text size scale factor -->
+	<textScale>1.0</textScale>
+	
+	<!-- mapsforge user scale factor -->	
+	<userScaleFactor>1.0</userScaleFactor>
+	
+</mapsforge>

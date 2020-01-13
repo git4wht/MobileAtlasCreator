@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customMapSource>
+	<name>Google Mapnik CN (T)</name>
+	<minZoom>0</minZoom>
+	<maxZoom>18</maxZoom>
+	<tileType>png</tileType>
+	<tileUpdate>None</tileUpdate>
+	<!-- 
+		地图图层说明
+h skeleton map light  http://mt2.google.cn/vt/lyrs=h&hl=zh-CN&gl=cn&x=420&y=193&z=9
+m 全地图   http://mt2.google.cn/vt/lyrs=m&hl=zh-CN&gl=cn&x=420&y=193&z=9
+p terrain+map  http://mt2.google.cn/vt/lyrs=p&hl=zh-CN&gl=cn&x=420&y=193&z=9
+r skeleton map dark   http://mt2.google.cn/vt/lyrs=r&hl=zh-CN&gl=cn&x=420&y=193&z=9
+y hybrid satellite map   http://mt1.google.cn/vt/lyrs=y&hl=zh-CN&gl=cn&x=420&y=193&z=9
+t 地形图   http://mt0.google.cn/vt/lyrs=t&hl=zh-CN&gl=cn&x=420&y=193&z=9
+s 卫星地图   http://mt3.google.cn/vt/lyrs=s&hl=zh-CN&gl=cn&x=420&y=193&z=9
+也可以进行组合，例如：s,r 或者 t,h   http://mt3.google.cn/vt/lyrs=t,h&hl=zh-CN&gl=cn&x=420&y=193&z=9
+	 -->
+	<url>http://mt3.google.cn/vt/lyrs=t&amp;hl=zh-CN&amp;gl=cn&amp;x={$x}&amp;y={$y}&amp;z={$z}</url>
+	<backgroundColor>#000000</backgroundColor>
+</customMapSource>

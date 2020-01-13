@@ -28,6 +28,7 @@ import org.xml.sax.SAXException;
 import mobac.exceptions.MapSourceCreateException;
 import mobac.mapsources.MapSourcesManager;
 import mobac.mapsources.custom.CustomCloudMade;
+import mobac.mapsources.custom.CustomCombinedMapSource;
 import mobac.mapsources.custom.CustomLocalTileFilesMapSource;
 import mobac.mapsources.custom.CustomLocalTileSQliteMapSource;
 import mobac.mapsources.custom.CustomLocalTileZipMapSource;
@@ -68,7 +69,7 @@ public class CustomMapSourceLoader {
 					CustomMapSource.class, //
 					CustomWmsMapSource.class, //
 					CustomMultiLayerMapSource.class, //
-					// CustomCombinedMapSource.class, //
+					CustomCombinedMapSource.class, // WHT CUSTOM
 					CustomMapsforge.class, //
 					CustomCloudMade.class, //
 					CustomLocalTileFilesMapSource.class, //

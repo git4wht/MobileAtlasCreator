@@ -129,6 +129,7 @@ public class TileLoader {
 					return false;
 				tile.setImage(image);
 				listener.tileLoadingFinished(tile, true);
+				tileStoreEntry = tileStore.getTile(zoom, tilex, tiley,mapSource); // WHT CUSTOM
 				if (TileDownLoader.isTileExpired(tileStoreEntry))
 					return false;
 				fileTilePainted = true;

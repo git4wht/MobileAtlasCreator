@@ -3,7 +3,7 @@
   <dontWrapJar>true</dontWrapJar>
   <headerType>gui</headerType>
   <jar>Mobile_Atlas_Creator.jar</jar>
-  <outfile>../build/dest/MobileAtlasCreator.exe</outfile>
+  <outfile>../build/dest/MobileAtlasCreator_Auto.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir></chdir>
@@ -15,14 +15,16 @@
   <manifest></manifest>
   <icon>mobac.ico</icon>
   <jre>
-    <path></path>
-    <bundledJre64Bit>false</bundledJre64Bit>
-    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <path>%JAVA_HOME%</path>
+    <bundledJre64Bit>true</bundledJre64Bit>
+    <bundledJreAsFallback>true</bundledJreAsFallback>
     <minVersion>1.8.0</minVersion>
     <maxVersion></maxVersion>
-    <jdkPreference>preferJre</jdkPreference>
+    <jdkPreference>preferJdk</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
-    <maxHeapSize>1200</maxHeapSize>
+    <!-- Heap sizes in MB and % of available memory. -->
+    <initialHeapPercent>40</initialHeapPercent>
+    <maxHeapPercent>90</maxHeapPercent>
   </jre>
   <versionInfo>
     <fileVersion>2.1.0.0</fileVersion>
@@ -33,7 +35,7 @@
     <txtProductVersion>-</txtProductVersion>
     <productName>Mobile Atlas Creator</productName>
     <companyName></companyName>
-    <internalName>Mobile Atlas Creator 1200MB max Heap</internalName>
+    <internalName>Mobile Atlas Creator 4096MB max Heap</internalName>
     <originalFilename>Mobile Atlas Creator.exe</originalFilename>
     <trademarks></trademarks>
     <language>ENGLISH_US</language>

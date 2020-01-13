@@ -1,16 +1,16 @@
 /*******************************************************************************
  * Copyright (c) MOBAC developers
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
@@ -66,6 +66,9 @@ public class BerkeleyDbTileStore extends TileStore {
 	 */
 	private static final int MAX_CONCURRENT_ENVIRONMENTS = 5;
 
+    // Custom:WHT
+	private static final String LOG_FILE_MAX = String.valueOf(1L<<30); // = 2^30 (1G)
+
 	private EnvironmentConfig envConfig;
 
 	private Map<String, TileDatabase> tileDbMap;
@@ -86,6 +89,8 @@ public class BerkeleyDbTileStore extends TileStore {
 		envConfig.setAllowCreate(true);
 		envConfig.setSharedCache(true);
 		envConfig.setCachePercent(50);
+		// Custom:WHT
+		envConfig.setConfigParam(EnvironmentConfig.LOG_FILE_MAX, LOG_FILE_MAX);
 
 		mutations = new Mutations();
 
@@ -467,7 +472,7 @@ public class BerkeleyDbTileStore extends TileStore {
 		}
 	}
 
-	protected class TileDatabase implements AutoCloseable {
+	public class TileDatabase  implements AutoCloseable {     // Custom: WHT CUSTOM
 
 		final String mapSourceName;
 		final Environment env;
@@ -588,7 +593,7 @@ public class BerkeleyDbTileStore extends TileStore {
 			return image;
 		}
 
-		protected void purge() {
+		public void purge() { // WHT CUSTOM
 			try {
 				store.sync();
 				env.cleanLog();

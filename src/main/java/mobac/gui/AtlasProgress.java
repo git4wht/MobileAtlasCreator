@@ -428,11 +428,21 @@ public class AtlasProgress extends JFrame implements ActionListener, MapSourceLi
 		} else {
 			int minutes = (int) (longSeconds / 60);
 			int seconds = (int) (longSeconds % 60);
-			if (minutes > 0)
+			// Custom: WHT
+			int hours = (int) (minutes / 60);
+			if (hours > 0){
+				minutes = (int) (minutes % 60);
+				timeString += Integer.toString(hours)
+						+ " "
+						+ (hours == 1 ? I18nUtils.localizedStringForKey("hour") : I18nUtils
+						.localizedStringForKey("hours")) + " ";
+			}
+			if (minutes > 0) {
 				timeString += Integer.toString(minutes)
 						+ " "
 						+ (minutes == 1 ? I18nUtils.localizedStringForKey("minute") : I18nUtils
-								.localizedStringForKey("minutes")) + " ";
+						.localizedStringForKey("minutes")) + " ";
+			}
 			timeString += Integer.toString(seconds)
 					+ " "
 					+ (seconds == 1 ? I18nUtils.localizedStringForKey("second") : I18nUtils
