@@ -51,7 +51,7 @@ public class PreviewMap extends JMapViewer {
 
 	public static final Color GRID_COLOR = new Color(200, 20, 20, 130);
 	public static final Color SEL_COLOR = new Color(0.9f, 0.7f, 0.7f, 0.6f);
-	public static final Color MAP_COLOR = new Color(1.0f, 0.84f, 0.0f, 0.4f);
+	public static final Color MAP_COLOR = new Color(1.0f, 0.84f, 0.0f, 0.9f); // WHT CUSTOM
 
 	public static final int MAP_CONTROLLER_RECTANGLE_SELECT = 0;
 	public static final int MAP_CONTROLLER_GPX = 1;
