@@ -27,8 +27,8 @@ public class OsmPublicTransport extends AbstractOsmMapSource {
 
 	public OsmPublicTransport() {
 		super("OSMPublicTransport");
-		this.maxZoom = 16;
-		this.minZoom = 2;
+		this.maxZoom = 20;
+		this.minZoom = 0;
 		this.tileUpdate = HttpMapSource.TileUpdate.IfNoneMatch;
 	}
 

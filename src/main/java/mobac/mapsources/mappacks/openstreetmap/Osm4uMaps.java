@@ -25,8 +25,8 @@ public class Osm4uMaps extends AbstractOsmMapSource {
 
 	public Osm4uMaps() {
 		super(NAME);
-		minZoom = 2;
-		maxZoom = 15;
+		minZoom = 0;
+		maxZoom = 20;
 		tileUpdate = TileUpdate.IfNoneMatch;
 	}
 

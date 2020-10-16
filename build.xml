@@ -51,7 +51,7 @@
 		<fileset dir="lib" includes="mapsforge/mapsforge*.jar" />
 	</path>
 
-	<target name="all" depends="clean_build,svnversion,build,build_mapsources,sign_mapsources,create_jar,create_util_jar,create_release,create_release_src" />
+	<target name="all" depends="clean_build,build,build_mapsources,sign_mapsources,create_jar,create_util_jar,create_release,create_release_src" />
 
 	<target name="update_mapsources" depends="build_mapsources,sign_mapsources" />
 
@@ -101,7 +101,7 @@
 		</copy>
 	</target>
 
-	<target name="build_mapsources" depends="clean_build,build,svnversion" description="Build all map packs and generate the new mappacks-md5.txt">
+	<target name="build_mapsources" depends="clean_build,build" description="Build all map packs and generate the new mappacks-md5.txt">
 		<property name="mappack.srcbasedir" value="src/main/java/mobac/mapsources/mappacks" />
 		<property file="src/keys/keystore.properties" />
 		<taskdef name="for" classname="net.sf.antcontrib.logic.ForTask">
